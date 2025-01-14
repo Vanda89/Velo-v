@@ -1,13 +1,12 @@
 var slideshow = {
   timer: null,
-  currentPicture: $('.slide:first-child'),
+  currentPicture: $(".slide:first-child"),
   sliding: null,
 
-  init: function() {
-    console.log("init slideshow");
+  init: function () {
     slideshow.startResume();
     // Ecouteur d'évènement à l'appui sur une touche du clavier
-    $(document).keydown(function(e) {
+    $(document).keydown(function (e) {
       // Flèche directionnelle gauche
       if (e.which === 37) {
         // A l'appui, le panorama recule d'un step grâce à la méthode rotate
@@ -29,23 +28,23 @@ var slideshow = {
 
     // Ecouteur d'évènement au clic de la souris, même fonctionnement que le clavier
     // Bouton flèche gauche
-    $('.fa-step-backward').click(function() {
+    $(".fa-step-backward").click(function () {
       slideshow.prev();
     });
     // Bouton flèche droite
-    $('.fa-step-forward').click(function() {
+    $(".fa-step-forward").click(function () {
       slideshow.next();
     });
     // Bouton pause
-    $('.fa-pause').click(slideshow.stop);
+    $(".fa-pause").click(slideshow.stop);
     // Bouton play
-    $('.fa-play').click(slideshow.startResume);
+    $(".fa-play").click(slideshow.startResume);
   },
 
   // Affichage d'une image
-  showPicture: function(nextPicture) {
+  showPicture: function (nextPicture) {
     // Dissimulation de l'image actuellement affichée
-    slideshow.currentPicture.fadeOut('fast');
+    slideshow.currentPicture.fadeOut("fast");
     // Affichage de l'image qui doit apparaître
     nextPicture.fadeIn();
     // Enregistrement de l'image actuellement affichée
@@ -53,12 +52,12 @@ var slideshow = {
   },
 
   // Affichage de l'image précédente
-  prev: function() {
+  prev: function () {
     var slide = null;
     // Recherche d'une image précédente
     if (slideshow.currentPicture.prev().length === 0) {
       // Aucune image précédente trouvée, donc récupération de la dernière
-      slide = $('.slide:last-child');
+      slide = $(".slide:last-child");
     } else {
       // Sinon récupèration de l'image précédente
       slide = slideshow.currentPicture.prev();
@@ -68,12 +67,12 @@ var slideshow = {
   },
 
   // Affiche l'image suivante
-  next: function() {
+  next: function () {
     var slide = null;
     // Recherche d'une image suivante
     if (slideshow.currentPicture.next().length === 0) {
       // Aucune image précédente trouvée, donc récupération de la première
-      slide = $('.slide:first-child');
+      slide = $(".slide:first-child");
     } else {
       // Sinon récupèration de l'image suivante
       slide = slideshow.currentPicture.next();
@@ -83,22 +82,21 @@ var slideshow = {
   },
 
   // Méthode permettant de mettre en pause le slideshow
-  stop: function() {
+  stop: function () {
     // Réinitialisation du timer pour empêcher le défilement automatique
     clearInterval(slideshow.timer);
     // Changement du style css pour indiquer à l'utilisateur sur quel bouton il a cliqué (par défaut actif sur play)
-    $('.fa-pause').toggleClass('active').css('color', '#333333');
-    $('.fa-play').css('color', 'white');
+    $(".fa-pause").toggleClass("active").css("color", "#333333");
+    $(".fa-play").css("color", "white");
   },
 
-  startResume: function() {
+  startResume: function () {
     // Empêcher le défilement automatique lorsque l'utilisateur fait défiler manuellement
     clearInterval(slideshow.timer);
     // Changement du style css pour indiquer à l'utilisateur sur quel bouton il a cliqué (par défaut actif sur play)
-    $('.fa-play').toggleClass('active').css('color', '#333333');
-    $('.fa-pause').css('color', 'white');
+    $(".fa-play").toggleClass("active").css("color", "#333333");
+    $(".fa-pause").css("color", "white");
     // Relancement du slideshow après la pause
     slideshow.timer = setInterval(slideshow.next, 3000);
   },
-
 };

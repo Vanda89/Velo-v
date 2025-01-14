@@ -1,94 +1,165 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Fichiers Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <!-- Favicon -->
+    <link rel="icon" href="./Images/favicon.jpg" />
+    <!-- Fichiers CSS -->
+    <link rel="stylesheet" type="text/css" href="./CSS/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css" />
+    <!--Feuille CSS chargée pour les résolutions plus petites-->
+    <link rel="stylesheet" href="./CSS/media-queries.css" />
+    <title>Vélov'me Lyon</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- Fichiers Fontawesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-  <!-- Favicon -->
-  <link rel="icon" href="./Images/favicon.jpg">
-  <!-- Fichiers CSS -->
-  <link rel="stylesheet" type="text/css" href="./CSS/reset.css">
-  <link rel="stylesheet" type="text/css" href="./CSS/style.css">
-  <!--Feuille CSS chargée pour les résolutions plus petites-->
-  <link rel="stylesheet" href="./CSS/media-queries.css">
-  <title>Vélov'me Lyon</title>
-</head>
+  <body>
+    <header>
+      <img class="bike" src="./images/logo-velo.png" alt="" />
+      <div class="header-text">
+        <h1>
+          <img class="title" src="./images/velov-logo.png" alt="" />
+          <span>me</span> lyon
+        </h1>
+        <a href="#stations-map">Réservation</a>
+      </div>
+      <img class="bike" src="./images/logo-velo.png" alt="" />
+    </header>
 
-<body>
-  <header>
-    <img class="bike" src="./images/logo-velo.png" alt="">
-    <div class="header-text">
-      <h1><img class="title" src="./images/velov-logo.png" alt=""> <span>me</span> lyon</h1>
-      <a href="#stations-map">Réservation</a>
+    <div id="main-wrapper">
+      <main>
+        <section id="slideshow">
+          <div id="slideshow-content">
+            <figure class="slide">
+              <img
+                class="expl"
+                id="expl-1"
+                src="./images/explanation-1.jpg"
+                alt="screenshot d'une carte des stations de vélo'v de lyon"
+              />
+              <img
+                class="bg"
+                src="./images/velib-lyon-1.jpg"
+                alt="photo vélos de Lyon et Villeurbanne"
+              />
+              <figcaption id="fig-1">
+                Cliquez sur le groupe de marqueurs correspondant à la zone de
+                votre station.
+              </figcaption>
+            </figure>
+
+            <figure class="slide">
+              <img
+                class="expl"
+                id="expl-2"
+                src="./images/explanation-2.png"
+                alt="screenshot d'une carte des stations de vélo'v de lyon"
+              />
+              <img
+                class="bg"
+                src="./images/velib-lyon-2.jpg"
+                alt="photo de vélos en libre service dans Lyon et Villeurbanne"
+              />
+              <figcaption id="fig-2">
+                Cliquez sur le marqueur de votre station pour faire apparaître
+                ses informations.
+              </figcaption>
+            </figure>
+
+            <figure class="slide">
+              <img
+                class="expl"
+                id="expl-3"
+                src="./images/explanation-3.png"
+                alt="screenshot d'une carte des stations de vélo'v de lyon"
+              />
+              <img
+                class="bg"
+                src="./images/velib-lyon-3.jpg"
+                alt="photo de vélos en libre service dans Lyon et Villeurbanne"
+              />
+              <figcaption id="fig-3">
+                Appuyez sur le bouton "Réserver" afin d'ouvrir le canvas de
+                réservation.
+              </figcaption>
+            </figure>
+
+            <figure class="slide">
+              <img
+                class="expl"
+                id="expl-4"
+                src="./images/explanation-4.png"
+                alt="screenshot d'une carte des stations de vélo'v de lyon"
+              />
+              <img
+                class="bg"
+                src="./images/velib-lyon-4.jpg"
+                alt="photo de vélos en libre service dans Lyon et Villeurbanne"
+              />
+              <figcaption id="fig-4">
+                Une fois votre canvas signé et validé, votre réservation est
+                enregistrée et notifiée.<br />
+                À présent, vous avez 20min pour aller chercher votre vélo'v à sa
+                borne.
+              </figcaption>
+            </figure>
+
+            <figure class="slide">
+              <img
+                class="expl"
+                id="expl-5"
+                src="./images/explanation-5.png"
+                alt="screenshot d'une carte des stations de vélo'v de lyon"
+              />
+              <img
+                class="bg"
+                src="./images/velib-lyon-5.jpg"
+                alt="photo de vélos en libre service dans Lyon et Villeurbanne"
+              />
+              <figcaption id="fig-5">
+                Si vous changez d'avis, vous pouvez toujours "Annuler votre
+                réservation" ou "Réserver" dans une autre station.
+              </figcaption>
+            </figure>
+          </div>
+
+          <div id="slideshow-controller">
+            <i class="fas fa-step-backward"></i>
+            <i class="fas fa-pause"></i>
+            <i class="fas fa-play"></i>
+            <i class="fas fa-step-forward"></i>
+          </div>
+        </section>
+
+        <section id="stations">
+          <!-- Contenu de la section carte (map + panneau) en js -->
+        </section>
+      </main>
+      <footer>
+        <!-- Contenu du pied de page généré en js -->
+      </footer>
     </div>
-    <img class="bike" src="./images/logo-velo.png" alt="">
-  </header>
 
-  <div id="main-wrapper">
-    <main>
-      <section id="slideshow">
-        <div id="slideshow-content">
-          <figure class="slide">
-            <img class="expl" id="expl-1" src="./images/explanation-1.jpg" alt="screenshot d'une carte des stations de vélo'v de lyon">
-            <img class="bg" src="./images/velib-lyon-1.jpg" alt="photo vélos de Lyon et Villeurbanne">
-            <figcaption id="fig-1">Cliquez sur le groupe de marqueurs correspondant à la zone de votre station.</figcaption>
-          </figure>
-
-          <figure class="slide">
-            <img class="expl" id="expl-2" src="./images/explanation-2.png" alt="screenshot d'une carte des stations de vélo'v de lyon">
-            <img class="bg" src="./images/velib-lyon-2.jpg" alt="photo de vélos en libre service dans Lyon et Villeurbanne">
-            <figcaption id="fig-2">Cliquez sur le marqueur de votre station pour faire apparaître ses informations.</figcaption>
-          </figure>
-
-          <figure class="slide">
-            <img class="expl" id="expl-3" src="./images/explanation-3.png" alt="screenshot d'une carte des stations de vélo'v de lyon">
-            <img class="bg" src="./images/velib-lyon-3.jpg" alt="photo de vélos en libre service dans Lyon et Villeurbanne">
-            <figcaption id="fig-3">Appuyez sur le bouton "Réserver" afin d'ouvrir le canvas de réservation.</figcaption>
-          </figure>
-
-          <figure class="slide">
-            <img class="expl" id="expl-4" src="./images/explanation-4.png" alt="screenshot d'une carte des stations de vélo'v de lyon">
-            <img class="bg" src="./images/velib-lyon-4.jpg" alt="photo de vélos en libre service dans Lyon et Villeurbanne">
-            <figcaption id="fig-4">Une fois votre canvas signé et validé, votre réservation est enregistrée et notifiée.<br>
-            À présent, vous avez 20min pour aller chercher votre vélo'v à sa borne.</figcaption>
-          </figure>
-
-          <figure class="slide">
-            <img class="expl" id="expl-5" src="./images/explanation-5.png" alt="screenshot d'une carte des stations de vélo'v de lyon">
-            <img class="bg" src="./images/velib-lyon-5.jpg" alt="photo de vélos en libre service dans Lyon et Villeurbanne">
-            <figcaption id="fig-5">Si vous changez d'avis, vous pouvez toujours "Annuler votre réservation" ou "Réserver" dans une autre station.</figcaption>
-          </figure>
-        </div>
-
-        <div id="slideshow-controller">
-          <i class="fas fa-step-backward"></i>
-          <i class="fas fa-pause"></i>
-          <i class="fas fa-play"></i>
-          <i class="fas fa-step-forward"></i>
-        </div>
-      </section>
-
-      <section id="stations">
-        <!-- Contenu de la section carte (map + panneau) en js -->
-      </section>
-    </main>
-    <footer>
-      <!-- Contenu du pied de page généré en js -->
-    </footer>
-  </div>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="./js/markerclusterer/markerclusterer.js"></script>
-  <script src="./js/slideshow.js"></script>
-  <script src="./js/jcdecaux.js"></script>
-  <script src="./js/googleMaps.js"></script>
-  <script src="./js/webStorage.js"></script>
-  <script src="./js/canvas.js"></script>
-  <script src="./js/app.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBycNAkvXHwFPjY-_km92365io11P7W8ek&callback=app.init"></script>
-</body>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/markerclusterer/markerclusterer.js"></script>
+    <script src="./js/slideshow.js"></script>
+    <script src="./js/jcdecaux.js"></script>
+    <script src="./js/googleMaps.js"></script>
+    <script src="./js/webStorage.js"></script>
+    <script src="./js/canvas.js"></script>
+    <script src="./js/app.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBycNAkvXHwFPjY-_km92365io11P7W8ek&callback=app.init"
+    ></script>
+  </body>
 </html>
